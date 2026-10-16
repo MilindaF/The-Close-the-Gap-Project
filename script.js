@@ -5,17 +5,70 @@ document.head.appendChild(refinementStyles);
 
 document.documentElement.classList.add('js-ready');
 
+// Keep the homepage purpose-driven and institutional rather than founder-centered.
 const statementBand = document.querySelector('.statement-band');
 if (statementBand) {
   statementBand.innerHTML = `
-    <div class="container vision-grid reveal">
-      <p class="vision-label">Our Vision</p>
-      <div class="vision-content">
-        <h2>A South Florida where getting help for your health feels clear, connected, and within reach.</h2>
-        <p>I started Close the Gap because I have seen how easily people can be left trying to navigate healthcare with too little information, too few trusted connections, and no clear place to begin. The problem is not always that resources do not exist. Too often, the path to them is fragmented, difficult to understand, or disconnected from the communities they are meant to serve.</p>
-        <p>Our vision is to shorten that distance. We want residents to know where to turn, young people to see themselves as future health leaders, and community, healthcare, and funding partners to work together around needs that people actually identify.</p>
-        <p class="vision-principle">The gap closes when people are heard, trusted resources are easier to reach, and good organizations are connected instead of working in isolation.</p>
+    <div class="container purpose-grid reveal">
+      <p class="purpose-label">WHY CLOSE THE GAP</p>
+      <div class="purpose-content">
+        <h2>Health resources can exist and still remain out of reach.</h2>
+        <p>Close the Gap works to make the path between people and care clearer by listening to communities, connecting organizations, strengthening access to trusted resources, and building programs around needs people actually identify.</p>
       </div>
+    </div>`;
+}
+
+// Reframe the core work as public health impact while preserving the existing section structure.
+const workSection = document.querySelector('.work-section');
+if (workSection) {
+  const eyebrow = workSection.querySelector('.work-heading .eyebrow');
+  const heading = workSection.querySelector('.work-heading h2');
+  if (eyebrow) eyebrow.textContent = 'Public Health Impact';
+  if (heading) heading.textContent = 'How we work to close the gap.';
+}
+
+// Clarify who CTG works with without changing the partnership layout the user likes.
+const partnersSection = document.querySelector('.partners-section');
+if (partnersSection) {
+  const eyebrow = partnersSection.querySelector('.partners-heading .eyebrow');
+  if (eyebrow) eyebrow.textContent = 'Who We Work With';
+}
+
+// Replace the founder-centered About section with organizational Vision, Mission, and Goals.
+const aboutSection = document.querySelector('#about');
+if (aboutSection) {
+  aboutSection.className = 'section about-section';
+  aboutSection.innerHTML = `
+    <div class="container about-heading reveal">
+      <p class="eyebrow">About Close the Gap</p>
+      <h2>Built to make community health support easier to find, understand, and use.</h2>
+    </div>
+
+    <div class="container about-principles reveal">
+      <article class="about-card">
+        <span>01</span>
+        <p class="about-card-label">Vision</p>
+        <h3>A South Florida where every community can reach the health information, services, and support it needs.</h3>
+        <p>We envision connected communities where trusted resources are easier to navigate, organizations work together instead of in isolation, and fewer people are left to figure out healthcare on their own.</p>
+      </article>
+
+      <article class="about-card">
+        <span>02</span>
+        <p class="about-card-label">Mission</p>
+        <h3>Listen locally. Connect intentionally. Build with communities.</h3>
+        <p>Close the Gap brings residents, community organizations, healthcare partners, educators, and funders together to identify barriers to care, strengthen access to trusted resources, and develop community-informed health initiatives.</p>
+      </article>
+
+      <article class="about-card goals-card">
+        <span>03</span>
+        <p class="about-card-label">Goals</p>
+        <div class="goal-list">
+          <div><strong>Listen & Learn</strong><p>Understand the barriers, priorities, and strengths communities identify for themselves.</p></div>
+          <div><strong>Connect & Strengthen</strong><p>Make trusted resources easier to find and strengthen connections among organizations already doing good work.</p></div>
+          <div><strong>Develop & Educate</strong><p>Create community-informed programming and prepare young people to become future health leaders.</p></div>
+          <div><strong>Measure & Share</strong><p>Evaluate what works, communicate impact clearly, and report back to the communities and partners involved.</p></div>
+        </div>
+      </article>
     </div>`;
 }
 
