@@ -48,8 +48,8 @@ if (aboutSection) {
       <article class="about-card">
         <span>01</span>
         <p class="about-card-label">Vision</p>
-        <h3>A South Florida where every community can reach the health information, services, and support it needs.</h3>
-        <p>We envision connected communities where trusted resources are easier to navigate, organizations work together instead of in isolation, and fewer people are left to figure out healthcare on their own.</p>
+        <h3>A future where no one is left behind because care was too hard to find, understand, or reach.</h3>
+        <p>We envision healthier, more connected communities where people can navigate care with confidence, trusted resources reach the people they are meant to serve, and organizations work together so access to health and opportunity is not determined by circumstance.</p>
       </article>
 
       <article class="about-card">
