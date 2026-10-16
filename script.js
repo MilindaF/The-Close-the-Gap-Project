@@ -1,3 +1,8 @@
+const refinementStyles = document.createElement('link');
+refinementStyles.rel = 'stylesheet';
+refinementStyles.href = 'refinements.css';
+document.head.appendChild(refinementStyles);
+
 document.documentElement.classList.add('js-ready');
 
 const menuToggle = document.querySelector('.menu-toggle');
