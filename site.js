@@ -1,5 +1,12 @@
 document.documentElement.classList.add('js-ready');
 
+if (document.querySelector('.home-hero')) {
+  const homeStyles = document.createElement('link');
+  homeStyles.rel = 'stylesheet';
+  homeStyles.href = 'home.css';
+  document.head.appendChild(homeStyles);
+}
+
 const menuToggle = document.querySelector('.menu-toggle');
 const mainNav = document.querySelector('.main-nav');
 if (menuToggle && mainNav) {
